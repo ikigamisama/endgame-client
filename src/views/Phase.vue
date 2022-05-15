@@ -393,7 +393,6 @@ export default {
       })
     },
     getUser (val) {
-      console.log(val)
       this.isHost = val.isHost
       this.userId = val.id
     },
