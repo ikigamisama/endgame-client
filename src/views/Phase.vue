@@ -16,10 +16,10 @@
         <el-row type="flex" justify="space-between">
           <el-col :lg="8" :md="10" :sm="24" :xs="24">
             <div class="row">
-              <div v-for="(ban, index) in characterSelection[0].selection.bans" :key="index" class="selection ban">
+              <div v-for="(ban, index) in characterSelection[0].selection.bans" :key="'A'+ index" class="selection ban">
                 <img v-if="ban" :src="ban" class="select">
               </div>
-              <div v-for="(ban, index) in characterSelection[0].bansRemaining" :key="index" class="selection ban">
+              <div v-for="(ban, index) in characterSelection[0].bansRemaining" :key="'B'+ index" class="selection ban">
                 <img class="select">
               </div>
             </div>
@@ -42,10 +42,10 @@
           </el-col>
           <el-col :lg="8" :md="10" :sm="24">
             <div class="row-reverse">
-              <div v-for="(ban, index) in characterSelection[1].selection.bans" :key="index" class="selection ban">
+              <div v-for="(ban, index) in characterSelection[1].selection.bans" :key="'C'+ index" class="selection ban">
                 <img v-if="ban" :src="ban" class="select">
               </div>
-              <div v-for="(ban, index) in characterSelection[1].bansRemaining" :key="index" class="selection ban">
+              <div v-for="(ban, index) in characterSelection[1].bansRemaining" :key="'D'+ index" class="selection ban">
                 <img class="select">
               </div>
             </div>
@@ -58,10 +58,10 @@
         <el-col :lg="6" :md="6" :sm="6" :xs="7">
           <div>
             <h1 class="fixed-width">{{ characterSelection[0].name }}</h1>
-            <div v-for="(pick, index) in characterSelection[0].selection.picks" :key="index" class="selection pick">
+            <div v-for="(pick, index) in characterSelection[0].selection.picks" :key="'E'+ index" class="selection pick">
               <img v-if="pick" :src="pick" class="select">
             </div>
-            <div v-for="(pick, index) in characterSelection[0].picksRemaining" :key="index" class="selection pick">
+            <div v-for="(pick, index) in characterSelection[0].picksRemaining" :key="'F'+ index" class="selection pick">
               <img class="select">
             </div>
             <div v-if="characterSelection[0].showButton" class="forSelection" :class="{'deselect': !characterSelection[0].isTurn, 'pick': selection}" @click="enter">
@@ -90,8 +90,8 @@
           <div v-if="!isHost" class="panel-container" :class="{'show': showPanel}">
             <el-scrollbar wrap-class="scrollbar-wrapper">
               <div class="character-panels">
-                <div v-for="(row, index) in panels" :key="index" class="panel-col">
-                  <img v-for="(character, cIndex) in row.characters" :key="cIndex" :src="character.image" @click="select(character)" class="panel" :class="row.color">
+                <div v-for="(row, index) in panels" :key=" 'G'+ index" class="panel-col">
+                  <img v-for="(character, cIndex) in row.characters" :key="'H'+ cIndex" :src="character.image" @click="select(character)" class="panel" :class="row.color">
                 </div>
               </div>
             </el-scrollbar>
@@ -112,10 +112,10 @@
         <el-col :lg="6" :md="6" :sm="6" :xs="7">
           <div v-if="players.length && characterSelection.length">
             <h1 class="fixed-width margin-left">{{ characterSelection[1].name }}</h1>
-            <div v-for="(pick, index) in characterSelection[1].selection.picks" :key="index" class="selection pick margin-left">
+            <div v-for="(pick, index) in characterSelection[1].selection.picks" :key="'I'+ index" class="selection pick margin-left">
               <img v-if="pick" :src="pick" class="select">
             </div>
-            <div v-for="(pick, index) in characterSelection[1].picksRemaining" :key="index" class="selection pick margin-left">
+            <div v-for="(pick, index) in characterSelection[1].picksRemaining" :key="'J'+ index" class="selection pick margin-left">
               <img class="select">
             </div>
             <div v-if="characterSelection[1].showButton" class="forSelection" :class="{'deselect': !characterSelection[1].isTurn, 'pick': selection}" @click="enter">
@@ -138,8 +138,8 @@
           <div v-if="!isHost" class="panel-container" :class="{'show': showPanel}">
               <el-scrollbar wrap-class="scrollbar-wrapper">
                 <div class="character-panels">
-                  <div v-for="(row, index) in panels" :key="index" class="panel-col">
-                    <img v-for="(character, cIndex) in row.characters" :key="cIndex" :src="character.image" @click="select(character)" class="panel" :class="row.color">
+                  <div v-for="(row, index) in panels" :key="'K'+ index" class="panel-col">
+                    <img v-for="(character, cIndex) in row.characters" :key="'L'+ cIndex" :src="character.image" @click="select(character)" class="panel" :class="row.color">
                   </div>
                 </div>
               </el-scrollbar>
@@ -178,8 +178,8 @@
         <div v-if="!isHost" class="panel-container" :class="{'show': showPanel}">
           <el-scrollbar wrap-class="scrollbar-wrapper">
             <div class="character-panels">
-              <div v-for="(row, index) in panels" :key="index" class="panel-col">
-                <img v-for="(character, cIndex) in row.characters" :key="cIndex" :src="character.image" @click="select(character)" class="panel" :class="row.color">
+              <div v-for="(row, index) in panels" :key="'M'+ index" class="panel-col">
+                <img v-for="(character, cIndex) in row.characters" :key="'N'+ cIndex" :src="character.image" @click="select(character)" class="panel" :class="row.color">
               </div>
             </div>
           </el-scrollbar>
