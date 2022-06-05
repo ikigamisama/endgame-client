@@ -409,6 +409,15 @@ const Characters = [
     flash: require('../assets/images/flash/Yanfei.webp')
   },
   {
+    name: 'Yelan',
+    vision: 'Hydro',
+    image: require('../assets/images/characters/yelan.webp'),
+    thumbnail: require('../assets/images/thumbnail/yelan_thumb.webp'),
+    picked: new Audio(require('../assets/voice/yelan_p.wav')),
+    banned: new Audio(require('../assets/voice/yelan_b.wav')),
+    flash: require('../assets/images/flash/Yelan.webp')
+  },
+  {
     name: 'Yoimiya',
     vision: 'Pyro',
     image: require('../assets/images/characters/yoimiya.webp'),
