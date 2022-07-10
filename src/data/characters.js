@@ -215,6 +215,15 @@ const Characters = [
     flash: require('../assets/images/flash/Sara.webp')
   },
   {
+    name: 'Kuki Shinobu',
+    vision: 'Electro',
+    image: require('../assets/images/characters/kuki-shinobu.webp'),
+    thumbnail: require('../assets/images/thumbnail/kuki-shinobu_thumb.webp'),
+    picked: new Audio(require('../assets/voice/kuki_p.wav')),
+    banned: new Audio(require('../assets/voice/kuki_b.wav')),
+    flash: require('../assets/images/flash/Shinobu.webp')
+  },
+  {
     name: 'Lisa',
     vision: 'Electro',
     image: require('../assets/images/characters/lisa.webp'),
