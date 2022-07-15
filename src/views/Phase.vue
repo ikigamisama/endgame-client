@@ -56,8 +56,8 @@
     <div class="container picking-section">
       <el-row>
         <el-col :lg="6" :md="6" :sm="6" :xs="7">
-          <div>
-            <h1 class="fixed-width">{{ characterSelection[0].name }}</h1>
+          <div style="overflow: hidden;max-width: 192px;">
+            <h1 class="fixed-width " :class="{'animated-text': characterSelection[0].name.length > 10}">{{ characterSelection[0].name }}</h1>
             <div v-for="(pick, index) in characterSelection[0].selection.picks" :key="'E'+ index" class="selection pick">
               <img v-if="pick" :src="pick" class="select">
             </div>
@@ -110,8 +110,8 @@
           </div>
        </el-col>
         <el-col :lg="6" :md="6" :sm="6" :xs="7">
-          <div v-if="players.length && characterSelection.length">
-            <h1 class="fixed-width margin-left">{{ characterSelection[1].name }}</h1>
+          <div v-if="players.length && characterSelection.length" style="overflow: hidden;max-width: 192px;margin-left: auto;">
+            <h1 class="fixed-width margin-left" :class="{'animated-text': characterSelection[1].name.length > 10}">{{ characterSelection[1].name }}</h1>
             <div v-for="(pick, index) in characterSelection[1].selection.picks" :key="'I'+ index" class="selection pick margin-left">
               <img v-if="pick" :src="pick" class="select">
             </div>
@@ -980,7 +980,20 @@ export default {
         margin: 0 auto;
       }
       &.fixed-width {
+        position: relative;
         max-width: 192px;
+      }
+      &.animated-text{
+        white-space: nowrap;
+        box-sizing: content-box;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+        -webkit-animation-name: ticker;
+        animation-name: ticker;
+        -webkit-animation-duration: 20s;
+        animation-duration: 20s;
       }
       &.margin-left {
         margin-left: auto;
@@ -1255,4 +1268,13 @@ export default {
       display: none;
       background-color: rgba(32,32,32,0.7);
     }
+
+    @-webkit-keyframes ticker {
+      from { transform: translateX(100%); }
+      to { transform: translateX(-100%); }
+  }
+  @keyframes ticker {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+  }
 </style>
