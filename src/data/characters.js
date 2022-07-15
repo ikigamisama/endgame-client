@@ -323,6 +323,15 @@ const Characters = [
     flash: require('../assets/images/flash/Shenhe.webp')
   },
   {
+    name: 'Shikanoin Heizou',
+    vision: 'Anemo',
+    image: require('../assets/images/characters/shikanoin-heizou.webp'),
+    thumbnail: require('../assets/images/thumbnail/heizou_thumb.webp'),
+    picked: new Audio(require('../assets/voice/heizou_p.wav')),
+    banned: new Audio(require('../assets/voice/heizou_b.wav')),
+    flash: require('../assets/images/flash/Heizou.webp')
+  },
+  {
     name: 'Sucrose',
     vision: 'Anemo',
     image: require('../assets/images/characters/sucrose.webp'),
