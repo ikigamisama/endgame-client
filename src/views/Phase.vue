@@ -56,8 +56,8 @@
     <div class="container picking-section">
       <el-row>
         <el-col :lg="6" :md="6" :sm="6" :xs="7">
-          <div style="overflow: hidden;max-width: 192px;">
-            <h1 class="fixed-width " :class="{'animated-text': characterSelection[0].name.length > 10}">{{ characterSelection[0].name }}</h1>
+          <div>
+            <h1 class="fixed-width">{{ characterSelection[0].name }}</h1>
             <div v-for="(pick, index) in characterSelection[0].selection.picks" :key="'E'+ index" class="selection pick">
               <img v-if="pick" :src="pick" class="select">
             </div>
@@ -110,8 +110,8 @@
           </div>
        </el-col>
         <el-col :lg="6" :md="6" :sm="6" :xs="7">
-          <div v-if="players.length && characterSelection.length" style="overflow: hidden;max-width: 192px;margin-left: auto;">
-            <h1 class="fixed-width margin-left" :class="{'animated-text': characterSelection[1].name.length > 10}">{{ characterSelection[1].name }}</h1>
+          <div v-if="players.length && characterSelection.length">
+            <h1 class="fixed-width margin-left">{{ characterSelection[1].name }}</h1>
             <div v-for="(pick, index) in characterSelection[1].selection.picks" :key="'I'+ index" class="selection pick margin-left">
               <img v-if="pick" :src="pick" class="select">
             </div>
@@ -131,9 +131,9 @@
       </el-row>
     </div>
     <div class="expand-character-wrapper" v-if="!isHost" :class="{'show': showPanel}" >
-      <buttton type="button" class="expander-button" @click="expandCharacters">
+      <button type="button" class="expander-button" @click="expandCharacters">
           <img :src="paimonIMG" alt="paimon-button-expand-character"/>
-      </buttton>
+      </button>
       <div class="character-list-wrapper">
           <div v-if="!isHost" class="panel-container" :class="{'show': showPanel}">
               <el-scrollbar wrap-class="scrollbar-wrapper">
@@ -264,6 +264,10 @@ export default {
       {
         color: 'Geo',
         characters: this.characters.filter(character => character.vision === 'Geo')
+      },
+      {
+        color: 'Dendro',
+        characters: this.characters.filter(character => character.vision === 'Dendro')
       }
     )
     this.default = this.characters.filter(character => character.vision === 'Unknown')[0]
@@ -579,6 +583,10 @@ export default {
         {
           color: 'Geo',
           characters: this.characters.filter(character => character.vision === 'Geo')
+        },
+        {
+          color: 'Dendro',
+          characters: this.characters.filter(character => character.vision === 'Dendro')
         }
       )
       document.querySelector('.expand-character-wrapper').classList.remove('active')
@@ -980,20 +988,7 @@ export default {
         margin: 0 auto;
       }
       &.fixed-width {
-        position: relative;
         max-width: 192px;
-      }
-      &.animated-text{
-        white-space: nowrap;
-        box-sizing: content-box;
-        -webkit-animation-iteration-count: infinite;
-        animation-iteration-count: infinite;
-        -webkit-animation-timing-function: linear;
-        animation-timing-function: linear;
-        -webkit-animation-name: ticker;
-        animation-name: ticker;
-        -webkit-animation-duration: 20s;
-        animation-duration: 20s;
       }
       &.margin-left {
         margin-left: auto;
@@ -1003,7 +998,7 @@ export default {
       text-align: center;
     }
     .panel {
-      height: 100px;
+      height: 85px;
       width: auto;
       cursor: pointer;
       margin: 0.3rem 0;
@@ -1268,13 +1263,4 @@ export default {
       display: none;
       background-color: rgba(32,32,32,0.7);
     }
-
-    @-webkit-keyframes ticker {
-      from { transform: translateX(100%); }
-      to { transform: translateX(-100%); }
-  }
-  @keyframes ticker {
-    from { transform: translateX(100%); }
-    to { transform: translateX(-100%); }
-  }
 </style>

@@ -80,6 +80,15 @@ const Characters = [
     flash: require('../assets/images/flash/Chongyun.webp')
   },
   {
+    name: 'Collei',
+    vision: 'Dendro',
+    image: require('../assets/images/characters/collei.webp'),
+    thumbnail: require('../assets/images/thumbnail/collei_thumb.webp'),
+    picked: new Audio(require('../assets/voice/collei_p.wav')),
+    banned: new Audio(require('../assets/voice/collei_b.wav')),
+    flash: require('../assets/images/flash/Collei.webp')
+  },
+  {
     name: 'Diluc',
     vision: 'Pyro',
     image: require('../assets/images/characters/diluc.webp'),
@@ -357,6 +366,15 @@ const Characters = [
     picked: new Audio(require('../assets/voice/thoma_p.wav')),
     banned: new Audio(require('../assets/voice/thoma_b.wav')),
     flash: require('../assets/images/flash/Thoma.webp')
+  },
+  {
+    name: 'Tighnari',
+    vision: 'Dendro',
+    image: require('../assets/images/characters/tighnari.webp'),
+    thumbnail: require('../assets/images/thumbnail/tighnari_thumb.webp'),
+    picked: new Audio(require('../assets/voice/tighnari_p.wav')),
+    banned: new Audio(require('../assets/voice/tighnari_b.wav')),
+    flash: require('../assets/images/flash/Tighnari.webp')
   },
   // {
   //   name: 'Traveler',
