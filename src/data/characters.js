@@ -107,6 +107,15 @@ const Characters = [
     flash: require('../assets/images/flash/Diona.webp')
   },
   {
+    name: 'Dori',
+    vision: 'Electro',
+    image: require('../assets/images/characters/dori.webp'),
+    thumbnail: require('../assets/images/thumbnail/dori_thumb.webp'),
+    picked: new Audio(require('../assets/voice/dori_p.wav')),
+    banned: new Audio(require('../assets/voice/dori_b.wav')),
+    flash: require('../assets/images/flash/Dori.webp')
+  },
+  {
     name: 'Eula',
     vision: 'Cryo',
     image: require('../assets/images/characters/eula.webp'),

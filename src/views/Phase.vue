@@ -1022,6 +1022,9 @@ export default {
       &.Geo {
         border-color: #a5a328;
       }
+      &.Dendro {
+        border-color: #A6C938;
+      }
     }
     .ban-panels {
       margin: 3rem 0 2rem;
