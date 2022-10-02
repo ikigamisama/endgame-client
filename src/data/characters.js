@@ -71,6 +71,15 @@ const Characters = [
     flash: require('../assets/images/flash/Bennett.webp')
   },
   {
+    name: 'Candace',
+    vision: 'Hydro',
+    image: require('../assets/images/characters/candace.webp'),
+    thumbnail: require('../assets/images/thumbnail/candace_thumb.webp'),
+    picked: new Audio(require('../assets/voice/candace_p.wav')),
+    banned: new Audio(require('../assets/voice/candace_b.wav')),
+    flash: require('../assets/images/flash/Candace.webp')
+  },
+  {
     name: 'Chongyun',
     vision: 'Cryo',
     image: require('../assets/images/characters/chongyun.webp'),
@@ -87,6 +96,15 @@ const Characters = [
     picked: new Audio(require('../assets/voice/collei_p.wav')),
     banned: new Audio(require('../assets/voice/collei_b.wav')),
     flash: require('../assets/images/flash/Collei.webp')
+  },
+  {
+    name: 'Cyno',
+    vision: 'Electro',
+    image: require('../assets/images/characters/cyno.webp'),
+    thumbnail: require('../assets/images/thumbnail/cyno_thumb.webp'),
+    picked: new Audio(require('../assets/voice/cyno_p.wav')),
+    banned: new Audio(require('../assets/voice/cyno_b.wav')),
+    flash: require('../assets/images/flash/Cyno.webp')
   },
   {
     name: 'Diluc',
