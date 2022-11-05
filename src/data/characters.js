@@ -278,6 +278,15 @@ const Characters = [
     flash: require('../assets/images/flash/Mona.webp')
   },
   {
+    name: 'Nilou',
+    vision: 'Hydro',
+    image: require('../assets/images/characters/nilou.webp'),
+    thumbnail: require('../assets/images/thumbnail/nilou_thumb.webp'),
+    picked: new Audio(require('../assets/voice/nilou_p.wav')),
+    banned: new Audio(require('../assets/voice/nilou_b.wav')),
+    flash: require('../assets/images/flash/Nilou.webp')
+  },
+  {
     name: 'Ningguang',
     vision: 'Geo',
     image: require('../assets/images/characters/ningguang.webp'),
