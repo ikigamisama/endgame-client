@@ -278,6 +278,15 @@ const Characters = [
     flash: require('../assets/images/flash/Mona.webp')
   },
   {
+    name: 'Nahida',
+    vision: 'Dendro',
+    image: require('../assets/images/characters/nahida.webp'),
+    thumbnail: require('../assets/images/thumbnail/nahida_thumb.webp'),
+    picked: new Audio(require('../assets/voice/nahida_p.wav')),
+    banned: new Audio(require('../assets/voice/nahida_b.wav')),
+    flash: require('../assets/images/flash/Nahida.webp')
+  },
+  {
     name: 'Nilou',
     vision: 'Hydro',
     image: require('../assets/images/characters/nilou.webp'),
