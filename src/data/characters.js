@@ -143,6 +143,15 @@ const Characters = [
     flash: require('../assets/images/flash/Eula.webp')
   },
   {
+    name: 'Faruzan',
+    vision: 'Anemo',
+    image: require('../assets/images/characters/faruzan.webp'),
+    thumbnail: require('../assets/images/thumbnail/faruzan_thumb.webp'),
+    picked: new Audio(require('../assets/voice/faruzan_p.wav')),
+    banned: new Audio(require('../assets/voice/faruzan_b.wav')),
+    flash: require('../assets/images/flash/Faruzan.webp')
+  },
+  {
     name: 'Fischl',
     vision: 'Electro',
     image: require('../assets/images/characters/fischl.webp'),
@@ -434,6 +443,15 @@ const Characters = [
     picked: new Audio(require('../assets/voice/venti_p.wav')),
     banned: new Audio(require('../assets/voice/venti_b.wav')),
     flash: require('../assets/images/flash/Venti.webp')
+  },
+  {
+    name: 'Wanderer',
+    vision: 'Anemo',
+    image: require('../assets/images/characters/wanderer.webp'),
+    thumbnail: require('../assets/images/thumbnail/wanderer_thumb.webp'),
+    picked: new Audio(require('../assets/voice/wanderer_p.wav')),
+    banned: new Audio(require('../assets/voice/wanderer_b.wav')),
+    flash: require('../assets/images/flash/Wanderer.webp')
   },
   {
     name: 'Xiangling',
