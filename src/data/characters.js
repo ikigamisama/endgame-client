@@ -10,10 +10,19 @@ const Characters = [
   {
     name: 'Albedo',
     vision: 'Geo',
-    image: require('../assets/images/characters/albedo.webp'),
+    image: require('../assets/images/characters/alhaitham.webp'),
     thumbnail: require('../assets/images/thumbnail/albedo_thumb.webp'),
     picked: new Audio(require('../assets/voice/albedo_p.wav')),
     banned: new Audio(require('../assets/voice/albedo_b.wav')),
+    flash: require('../assets/images/flash/Albedo.webp')
+  },
+  {
+    name: 'Alhaitham',
+    vision: 'Dendro',
+    image: require('../assets/images/characters/alhaitham.webp'),
+    thumbnail: require('../assets/images/thumbnail/alhaitham_thumb.webp'),
+    picked: new Audio(require('../assets/voice/alhaitham_p.wav')),
+    banned: new Audio(require('../assets/voice/alhaitham_b.wav')),
     flash: require('../assets/images/flash/Albedo.webp')
   },
   {
@@ -506,6 +515,15 @@ const Characters = [
     picked: new Audio(require('../assets/voice/yanfei_p.wav')),
     banned: new Audio(require('../assets/voice/yanfei_b.wav')),
     flash: require('../assets/images/flash/Yanfei.webp')
+  },
+  {
+    name: 'Yaoyao',
+    vision: 'Dendro',
+    image: require('../assets/images/characters/yaoyao.webp'),
+    thumbnail: require('../assets/images/thumbnail/yaoyao_thumb.webp'),
+    picked: new Audio(require('../assets/voice/yaoyao_p.wav')),
+    banned: new Audio(require('../assets/voice/yaoyao_b.wav')),
+    flash: require('../assets/images/flash/Yaoyao.webp')
   },
   {
     name: 'Yelan',
