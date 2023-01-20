@@ -10,11 +10,11 @@ const Characters = [
   {
     name: 'Albedo',
     vision: 'Geo',
-    image: require('../assets/images/characters/alhaitham.webp'),
+    image: require('../assets/images/characters/albedo.webp'),
     thumbnail: require('../assets/images/thumbnail/albedo_thumb.webp'),
     picked: new Audio(require('../assets/voice/albedo_p.wav')),
     banned: new Audio(require('../assets/voice/albedo_b.wav')),
-    flash: require('../assets/images/flash/Alhaitham.webp')
+    flash: require('../assets/images/flash/Albedo.webp')
   },
   {
     name: 'Alhaitham',
@@ -23,7 +23,7 @@ const Characters = [
     thumbnail: require('../assets/images/thumbnail/alhaitham_thumb.webp'),
     picked: new Audio(require('../assets/voice/alhaitham_p.wav')),
     banned: new Audio(require('../assets/voice/alhaitham_b.wav')),
-    flash: require('../assets/images/flash/Albedo.webp')
+    flash: require('../assets/images/flash/Alhaitham.webp')
   },
   {
     name: 'Aloy',
