@@ -14,7 +14,7 @@ const Characters = [
     thumbnail: require('../assets/images/thumbnail/albedo_thumb.webp'),
     picked: new Audio(require('../assets/voice/albedo_p.wav')),
     banned: new Audio(require('../assets/voice/albedo_b.wav')),
-    flash: require('../assets/images/flash/Albedo.webp')
+    flash: require('../assets/images/flash/Alhaitham.webp')
   },
   {
     name: 'Alhaitham',
